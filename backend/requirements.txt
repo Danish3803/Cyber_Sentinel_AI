@@ -1,0 +1,10 @@
+flask==3.0.3
+flask-cors
+gunicorn
+numpy>=1.26.0
+pandas>=2.0.0
+scikit-learn
+xgboost
+lightgbm
+joblib
+requests
