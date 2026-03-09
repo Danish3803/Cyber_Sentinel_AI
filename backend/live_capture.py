@@ -106,21 +106,21 @@ try:
     if resp.status_code == 200:
         data = resp.json()
         available = data.get('available_models', [])
-        print(f"✅ Backend Online. Available Models: {available}")
+        print(f"Backend Online. Available Models: {available}")
         
         if API_MODEL not in available:
             if available:
-                print(f"⚠️ Warning: Configured model '{API_MODEL}' not found on backend.")
-                print(f"👉 Switching to '{available[0]}' automatically.")
+                print(f"Warning: Configured model '{API_MODEL}' not found on backend.")
+                print(f"Switching to '{available[0]}' automatically.")
                 API_MODEL = available[0]
             else:
-                print("❌ CRITICAL: No models loaded on the backend!")
-                print("   Ensure you have pushed the .joblib files to backend/saved_models/ on GitHub.")
+                print("CRITICAL: No models loaded on the backend!")
+                print("Ensure you have pushed the .joblib files to backend/saved_models/ on GitHub.")
                 sys.exit(1)
     else:
-        print(f"⚠️ Backend returned status {resp.status_code}")
+        print(f"Backend returned status {resp.status_code}")
 except Exception as e:
-    print(f"⚠️ Could not connect to backend: {e}")
+    print(f"Could not connect to backend: {e}")
 
 try:
     while True:
@@ -201,11 +201,11 @@ try:
                     timeout=2
                 )
                 if response.status_code == 200:
-                    print(f"✅ Sent to backend: {label}")
+                    print(f"Sent to backend: {label}")
                 else:
-                    print(f"❌ Backend Error {response.status_code}: {response.text[:100]}")
+                    print(f"Backend Error {response.status_code}: {response.text[:100]}")
             except Exception as e:
-                print("⚠️ Failed to send to backend (Connection Error):", e)
+                print("Failed to send to backend (Connection Error):", e)
 
             print(f"{label}: {key}")
             print("=" * 60)
