@@ -1,5 +1,4 @@
-# 
-Python 3.10
+# Python version requirement (for reference): Python 3.10
 
 # Backend API & Server
 flask==3.0.3
