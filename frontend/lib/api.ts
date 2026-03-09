@@ -1,6 +1,8 @@
 // frontend/lib/api.ts
 
-const API_BASE_URL = "https://cyber-sentinelai.onrender.com";
+// By using a relative path, we can leverage Netlify redirects in production
+// and Next.js rewrites in local development.
+const API_BASE_URL = "";
 
 /**
  * Defines the structure for the main statistics object from the backend.
