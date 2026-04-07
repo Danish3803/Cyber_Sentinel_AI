@@ -8,7 +8,7 @@ from flask import Flask, request, jsonify, redirect
 from flask_cors import CORS
 
 app = Flask(__name__)
-CORS(app, origins=["https://cyber-sentinel-evxklgflx-danish-sheikhs-projects.vercel.app"])  
+CORS(app, origins=["https://cyber-sentinel-ai-alpha.vercel.app"])  
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(os.path.dirname(BASE_DIR))
